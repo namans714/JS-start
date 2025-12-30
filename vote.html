@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote Eligibility</title>
+</head>
+<body>
+    
+    <div>
+        <input type="number" id="age" placeholder="Enter your age">
+        <br><br>    
+        <button onclick="check()">Check your Eligibility</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function check(){
+            let value = Number(document.getElementById("age").value);
+            let result;
+            if(value>=18){
+                result = "Congrats! You are eligible to vote.";
+                        }
+                else {
+                    result = "Sorry, You're not eligible to vote. (Padhaayi par dhyaan do)"
+                }
+            document.getElementById("result").innerText=result;
+            }
+
+            
+    </script>
+</body>
+</html>
