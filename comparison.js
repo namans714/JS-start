@@ -32,4 +32,3 @@ document.getElementById(x);
 console.log("Enter the second number:");
 document.getElementById(y);
 console.log(`two numbers you entered are ${x} and ${y}`);
-

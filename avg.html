@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Marks</title>
+</head>
+<body>
+    <div>
+        <input type="number" id="m1" placeholder="Enter your marks scored in English">
+        <input type="number" id="m2" placeholder="Enter your marks scored in Maths">
+        <input type="number" id="m3" placeholder="Enter your marks scored in Science">
+
+    <br><br>
+
+    <button onclick="calculate('avg')">Average Marks</button>
+    <button onclick="calculate('per')">Percentage</button>
+
+    <p id="result"></p>
+    </div>
+    
+    <script>
+
+        function calculate(input) {
+        let a = Number(document.getElementById("m1").value);
+        let b = Number(document.getElementById("m2").value);
+        let c = Number(document.getElementById("m3").value);
+        let result;
+   
+        if(input=="avg"){
+            result=(a+b+c)/3;
+        }
+        else if(input=="per"){
+        result = ((a + b + c) / 300) * 100 + "%";
+            }
+        else{
+            result="Wrong input";
+        }
+          document.getElementById("result").innerText = "Result: " + result;
+        }     
+   </script>
+</body>
+</html>
