@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+<body>
+    <div>
+        <h2>Enter the number till you want to print :</h2>
+        <input type="number" id="end" placeholder="write number">
+        <br><br>
+        <button onclick="calc()">Calculate</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function calc() {
+            let a = Number(document.getElementById('end').value);
+            document.getElementById("result").innerHTML = "";
+            for (let i=1; i<=a; i++) {
+                if (i%2!=0) {
+                    document.getElementById("result").innerHTML += i + "<br>";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

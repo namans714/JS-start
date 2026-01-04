@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Math Table Generator</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+  }
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+  }
+
+  .card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 14px;
+    width: 320px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    outline: none;
+    transition: 0.3s;
+  }
+
+  input:focus {
+    border-color: #667eea;
+  }
+
+  button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  }
+
+  #result {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 15px;
+    color: #222;
+    line-height: 1.6;
+  }
+
+  .line {
+    background: #f4f6ff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>Math Table Generator</h2>
+
+  <input type="number" id="num" placeholder="Enter a number">
+
+  <button onclick="table()">Generate Table</button>
+
+  <div id="result"></div>
+</div>
+
+<script>
+  function table() {
+    let a = Number(document.getElementById("num").value);
+    let result = document.getElementById("result");
+
+    // clear old output
+    result.innerHTML = "";
+
+    if (!a) {
+      result.innerHTML = "<b>Please enter a valid number</b>";
+      return;
+    }
+
+    for (let i = 1; i <= 10; i++) {
+      result.innerHTML += `
+        <div class="line">${a} × ${i} = ${a * i}</div>
+      `;
+    }
+  }
+</script>
+
+</body>
+</html>
