@@ -17,13 +17,13 @@
 // console.log("1"===1); //*
 // console.log("1"==1);
 
-// console.log(null==undefined);
-// console.log(null===undefined);
-// console.log(null<0);
-// console.log(null>0);//null becomes 0
-// console.log(null<1);
-// console.log(null==0);//null is null
-// console.log(null>=0);
+console.log(null==undefined);
+console.log(null===undefined);
+console.log(null<0);
+console.log(null>0);//null becomes 0
+console.log(null<1);
+console.log(null==0);//null is null
+console.log(null>=0);
 
 let x;
 let y;
